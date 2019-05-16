@@ -1,13 +1,8 @@
-<app-header (filterName)="OnNameRecive($event)"></app-header>
+<app-header></app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <div *ngIf="IsRecipes(clickName) else shopping">
-        <app-recipies></app-recipies>
-      </div>
-      <ng-template #shopping>
-        <app-shopping></app-shopping>
-      </ng-template>
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>
